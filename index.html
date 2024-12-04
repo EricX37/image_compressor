@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片压缩工具</h1>
+        
+        <div class="upload-container" id="dropZone">
+            <svg class="upload-icon" viewBox="0 0 24 24" width="48" height="48">
+                <path d="M19 13h-4v4h-2v-4H9v-2h4V7h2v4h4v2zm1-9H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H4V6h16v14z"/>
+            </svg>
+            <p>拖拽图片到这里 或 <label for="fileInput">点击上传</label></p>
+            <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        </div>
+
+        <div class="controls" hidden>
+            <div class="quality-control">
+                <label>压缩质量：</label>
+                <div class="quality-options">
+                    <label class="quality-option">
+                        <input type="radio" name="quality" value="high" checked>
+                        <span>低压缩</span>
+                    </label>
+                    <label class="quality-option">
+                        <input type="radio" name="quality" value="medium">
+                        <span>中压缩</span>
+                    </label>
+                    <label class="quality-option">
+                        <input type="radio" name="quality" value="low">
+                        <span>强压缩</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-container" hidden>
+            <div class="preview-item">
+                <h3>原图</h3>
+                <img id="originalPreview">
+                <div class="image-info" id="originalInfo"></div>
+            </div>
+            <div class="preview-item">
+                <h3>压缩后</h3>
+                <img id="compressedPreview">
+                <div class="image-info" id="compressedInfo"></div>
+                <button id="downloadBtn">下载压缩后的图片</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
