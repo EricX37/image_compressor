@@ -11,7 +11,7 @@
 
 ## 在线使用
 
-访问：https://ericx37.github.io/image_compressor
+访问：https://ericx37.github.io/image_compressor/
 
 ## 本地使用
 
